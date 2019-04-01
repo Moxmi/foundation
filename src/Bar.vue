@@ -14,13 +14,27 @@
       <div class="banner">
         <img v-for="(item, index) in bannerImg" :src="item.src" :class="{show: index === curImgIndex, hide: index !== curImgIndex}">
       </div>
+      <dl class="intro">
+	<dt class="intro__title">北京xxx基金会</dt>
+	<dd class="intro__text">{{ intro }}</dd>
+      </dl>
+      <dl class="info-container">
+	<dl class="news">
+	  <dt class="news__title">公告</dt>
+	  <dd class="news__text" v-for="item in news">{{ item }}</dd>
+	</dl>
+	<dl class="news">
+	  <dt class="news__title">公告</dt>
+	  <dd class="news__text" v-for="item in news">{{ item }}</dd>
+	</dl>
+      </dl>
       <div class="activity">
-        <p class="activity__title">活动公告</p>
+        <!--p class="activity__title">活动公告</p>
         <dl class="card" v-for="item in cards">
           <dt class="card__name">{{ item.name }}</dt>
           <dd class="card__content">{{ item.text }}</dd>
           <dd class="card__href">了解详情</dd>
-        </dl>
+        </dl-->
       </div>
       <div class="friend">
         <p class="friend__title">合作伙伴</p>
@@ -38,6 +52,14 @@ export default {
   name: 'Bar',
   data() {
     return {
+      news: [
+	'2018年8月12日，我市领导组织党建班子参观访问基金会发展历程博物馆领导指出',
+	'2018年8月12日，我市领导组织党建班子参观访问基金会发展历程博物馆领导指出',
+	'2018年8月12日，我市领导组织党建班子参观访问基金会发展历程博物馆领导指出',
+	'2018年8月12日，我市领导组织党建班子参观访问基金会发展历程博物馆领导指出',
+	'2018年8月12日，我市领导组织党建班子参观访问基金会发展历程博物馆领导指出'
+      ],
+      intro: '北京三一公益基金会（Sany Foundation，简称三一基金会）于2013年12月31日在北京市民政局注册成立。三一基金会以推动科学公益为使命，在理论研究、行动支持和公共倡导三个领域开展项目，致力于建构和推广“科学公益”理论体系、支持专业有效的公益实践行动、培养和提升公众意识，以期提升公益效能，推动中国公益的科学发展，共建充满活力、善意和信任的社会。北京三一公益基金会（Sany Foundation，简称三一基金会）于2013年12月31日在北京市民政局注册成立。三一基金会以推动科学公益为使命，在理论研究、行动支持和公共倡导三个领域开展项目，致力于建构和推广“科学公益”理论体系、支持专业有效的公益',
       curImgIndex: 0,
       cards: [
         {
@@ -225,6 +247,7 @@ ul, ol, li {
 
     .banner {
       position: relative;
+      margin-top: 25px;
       width: 100%;
       height: 300px;
 
@@ -245,6 +268,38 @@ ul, ol, li {
         opacity: 0;
         animation: slowly-out 2s ease;
         -webkit-animation: slowly-out 2s ease;
+      }
+    }
+    
+    .intro {
+      display: inline-block;
+      width: 600px;
+      padding: 50px 50px 50px 0;
+      text-align: center;
+      font-size: 14px;
+      vertical-align: middle;
+	
+      .intro__title {
+	margin-bottom: 5px;
+	font-weight: bold;
+      }
+
+      .intro__text {
+	text-align: left;
+	line-height: 1.8;
+      }
+    }
+
+    .info-container {
+      display: inline-block;
+      width: 590px;
+      padding: 25px 0;
+      vertical-align: middle;
+
+      .news {
+	display: inline-block;
+	margin: 25px 0;
+	line-height: 1.5
       }
     }
 

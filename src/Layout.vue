@@ -171,6 +171,7 @@ ul, ol, li {
       position: relative;
       width: 100%;
       border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
       font-size: 14px;
       text-align: center;
 
