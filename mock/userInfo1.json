@@ -1,0 +1,9 @@
+ {
+  "error": 0,
+  "data":{
+    "userid": "@id()",
+    "username": "@cname()",
+    "date": "@date()",
+    "avatar": "@image('200x200','red','#fff','avatar')"
+  }
+}
