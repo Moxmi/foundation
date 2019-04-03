@@ -12,7 +12,8 @@
         <li class="navitagion-bar__item" v-for="item in navitagionBar">{{ item }}</li>
       </ul-->
       <div class="banner">
-        <img v-for="(item, index) in bannerImg" :src="item.src" :class="{show: index === curImgIndex, hide: index !== curImgIndex}">
+        <img src="./banner-1.jpeg" :class="{show: 0 === curImgIndex, hide: 0 !== curImgIndex}">
+        <img src="./banner-2.jpeg" :class="{show: 1 === curImgIndex, hide: 1 !== curImgIndex}">
       </div>
       <dl class="intro">
 	<dt class="intro__title">北京xxx基金会</dt>
@@ -29,12 +30,12 @@
 	</dl>
       </dl>
       <div class="activity">
-        <!--p class="activity__title">活动公告</p>
+        <p class="activity__title">活动公告</p>
         <dl class="card" v-for="item in cards">
           <dt class="card__name">{{ item.name }}</dt>
           <dd class="card__content">{{ item.text }}</dd>
           <dd class="card__href">了解详情</dd>
-        </dl-->
+        </dl>
       </div>
       <div class="friend">
         <p class="friend__title">合作伙伴</p>
@@ -77,16 +78,12 @@ export default {
       ],
       bannerImg: [
         {
-          src: 'http://www.ywjjh.org.cn/banner/images/01.jpg',
+          src: './banner-1.jpeg',
           name: '1'
         },
         {
-          src: 'http://www.ywjjh.org.cn/banner/images/02.jpg',
+          src: './banner-2.jpeg',
           name: '2'
-        },
-        {
-          src: 'http://www.ywjjh.org.cn/banner/images/03.jpg',
-          name: '3'
         }
       ],
       friends: [

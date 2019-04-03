@@ -142,9 +142,9 @@ ul, ol, li {
     .logo {
       position: relative;
       display: inline-block;
-      width: 400px;
+      width: 200px;
       height: 65px;
-      background: url('http://www.ywjjh.org.cn/images/1124003.jpg') no-repeat center / contain;
+      background: url('logo.png') no-repeat center / contain;
     }
 
     .name {
